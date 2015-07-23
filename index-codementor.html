@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Reactive all the things</title>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/prism.css">
+        <link rel="stylesheet" href="css/custom.css">
+    </head>
+    <body>
+    <article>
+      <section data-bespoke-state="start">
+        <div class="content">
+          <div class="unbrokenline"></div>
+          <h1>Reactive all the things</h1>
+          <div class="byline">
+            <div class="classy">
+              by Martin Gontovnikas &amp; Ben Lesh
+            </div>
+          </div>
+          <div class="profile">
+            <div class="rounded-image">
+              <img src="img/gonto.jpg">
+            </div>
+            <h3>@mgonto</h3>
+          </div>
+          <br />
+          <div class="profile">
+            <div class="rounded-image">
+              <img src="img/benlesh.jpeg">
+            </div>
+            <h3>@benlesh</h3>
+          </div>
+        </div>
+      </section>
+
+
+      <section data-bespoke-state="mgonto">
+        <div class="content">
+          <div class="byline">
+            <div class="classy">Hey there, I am</div>
+          </div>
+          <h1>@mgonto</h1>
+          <div class="unbrokenline"></div>
+        </div>
+      </section>
+
+
+      <section data-bespoke-state="developer">
+        <div class="content">
+          <div class="byline">
+            <div class="classy">
+              I am a
+            </div>
+          </div>
+          <h2>software developer</h2>
+          <div class="byline">
+            <div class="classy">
+              from Buenos Aires, Argentina
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section data-bespoke-state="auth0">
+        <div class="content">
+          <div class="byline">
+            <div class="classy">
+              working at
+            </div>
+          </div>
+          <h3>Auth0 Inc.</h3>
+          <div class="byline">
+            <div class="classy">
+              making stuff happen
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section data-bespoke-state="js">
+        <div class="content">
+          <div class="byline">
+            <div class="classy">
+              used to be coding
+            </div>
+          </div>
+          <h3>Javascript</h3>
+          <div class="byline">
+            <div class="classy">
+              all day long
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section data-bespoke-state="programming">
+        <div class="content"></div>
+      </section>
+
+      <section data-bespoke-state="advocate">
+        <div class="content">
+          <div class="byline">
+            <div class="classy">
+              Now I work as a
+            </div>
+          </div>
+          <h3>Developer Advocate</h3>
+          <div class="unbrokenline"></div>
+        </div>
+      </section>
+
+      <section data-bespoke-state="onemore">
+        <div class="content">
+        </div>
+      </section>
+
+      <section>
+        <div class="content">
+          <a target="_blank" href="https://auth0.com/signup"><img src="img/badge.png"></a>
+          <button target="_blank" href="https://auth0.com/signup" class="btn-free">Create Free Account</button>
+          <h4><a target="_blank" href="https://auth0.com/signup">auth0.com/signup</a></h4>
+
+        </div>
+      </section>
+
+
+      <section>
+        <div class="content">
+          <div class="byline">
+            <div class="classy">
+              this talk is about
+            </div>
+          </div>
+          <h3>Reactive Frontend</h3>
+          <div class="byline">
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="content">
+          <h3>Functional Reactive Programming?</h3>
+          <div class="unbrokenline"></div>
+          <div class="fake-list">
+            <h4>- This talk is <strong>NOT</strong> about FRP</h4>
+            <h4>- This talk is about integrating Functional Programming</h4>
+            <h4>- This talk is about Reactive Programming</h4>
+            <h4>- FRP is a different animal</h4>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="content">
+          <h2>Why go functional?</h2>
+          <div class="unbrokenline"></div>
+          <h4>I have nice, familiar, imperative code:</h4>
+          <pre><code class="language-javascript">function oddlyExcited(nums) {
+  var result = [];
+  nums.forEach(function(n) {
+    if(n % 2 === 1) {
+      result.push(n + '!!!');
+    }
+  });
+  return result;
+}
+          </code></pre>
+        </div>
+      </section>
+
+      <section>
+        <div class="content">
+          <h3>JavaScript, as you know it, is going to change</h3>
+        </div>
+      </section>
+
+      <section>
+        <div class="content">
+          <h3>Cores aren't getting much faster</h3>
+          <div class="classy">(Now you can't scale by waiting a month)</div>
+          <img src="img/clock-speed.png"/>
+          <sub><a href="https://csgillespie.wordpress.com/2011/01/25/cpu-and-gpu-trends-over-time/">(source: csgillespie.wordpress.com)</a></sub>
+        </div>
+      </section>
+
+      <section data-bespoke-state="looking-around">
+        <div class="content">
+          <h4>Real concurrency is coming to JavaScript</h4>
+        </div>
+      </section>
+
+      <section>
+        <div class="content">
+          <div class="classy">(but not yet)</div>
+        </div>
+      </section>
+
+      <section>
+        <div class="content">
+          <h3>Learn Functional Programming</h3>
+          <div class="byline">
+            <div class="classy">Its goals align* with parallelism!</div>
+          </div>
+          <div class="fake-list">
+            <h4>- immutable state</h4>
+            <h4>- no side effects</h4>
+            <h4>- work could easily be scaled across threads</h4>
+          </div>
+          <sub>(* pun!)</sub>
+        </div>
+      </section>
+
+      <section>
+        <div class="content">
+          <h4>Array map(), filter(), reduce()</h4>
+          <pre><code class="language-javascript">function oddlyExcited(nums) {
+  return nums.filter(function(x) {
+    return x % 2 === 1;
+  }).map(function(x) {
+    return x + '!!!';
+  });
+}
+          </code></pre>
+        </div>
+      </section>
+
+      <section>
+        <div class="content">
+          <div class="classy">working on my app at Netflix, I encountered a problem with this approach</div>
+        </div>
+      </section>
+
+      <section>
+        <div class="content">
+          <h2>Argus</h2>
+          <div class="byline">
+            <div class="classy">A realtime dashboard for the Netflix cloud</div>
+          </div>
+          <div class="fake-list">
+            <h4>- dozens of graphs</h4>
+            <h4>- realtime multiplexed data over WebSockets</h4>
+            <h4>- lots of rich user interactions</h4>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="content">
+          <video src="media/redacted-argus.mp4" autoplay loop></video>
+        </div>
+      </section>
+
+      <section data-bespoke-state="he-said-what">
+        <div class="content">
+          <div class="byline">
+            <div class="classy">full disclosure</div>
+          </div>
+          <div class="classy">(It's an Ember app)</div>
+          <div class="unbrokenline"></div>
+        </div>
+      </section>
+
+      <section>
+        <div class="content">
+          <h3>The first big demo</h3>
+        </div>
+      </section>
+
+      <section>
+        <div class="content">
+          <div class="fake-list">
+            <h4>- Feeling confident</h4>
+            <h4>- Created reusable, composable graphs</h4>
+            <h4>- Got all of our arrays of real-time data scrubbed into graphs</h4>
+            <h4>- We got our mouse interactions working</h4>
+            <h4>- Used test data that mirrored production data volume</h4>
+          </div>
+        </div>
+      </section>
+
+      <section data-bespoke-state="demo-day-fail">
+        <div class="content">
+          <h3>But we used production data for the demo</h3>
+        </div>
+      </section>
+
+      <section>
+        <div class="content">
+          <h3>Too much Array map, filter, reduce</h3>
+          <div class="byline">
+            <div class="classy">killed performance</div>
+          </div>
+          <div class="fake-list">
+            <h4>- iterates over the entire array at each step</h4>
+            <h4>- creates new arrays at each step</h4>
+            <h4>- those intermediary arrays need to be garbage collected</h4>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="content">
+          <h3>I need stream processing!</h3>
+          <div class="classy">RxJS Observables enable that</div>
+        </div>
+      </section>
+
+      <section>
+        <div class="content">
+          <pre><code class="language-javascript">array.filter(x => x % 2 === 1).map(x => x + '!!!');</code></pre>
+          <div class="byline">
+            <div class="classy">becomes</div>
+          </div>
+          <pre><code class="language-javascript">observable.filter(x => x % 2 === 1).map(x => x + '!!!');</code></pre>
+        </div>
+      </section>
+
+      <section>
+        <div class="content">
+          <h3>What else can Observables do?</h3>
+        </div>
+      </section>
+
+      <section>
+        <div class="content">
+          <div class="unbrokenline"></div>
+          <h3>Observables</h3>
+          <div class="classy">
+            <div class="byline">are a representation of</div>
+          </div>
+          <h3>any collection of values</h3>
+          <div class="classy">
+            <div class="byline">over</div>
+          </div>
+          <h3>any amount of time</h3>
+          <div class="unbrokenline"></div>
+        </div>
+      </section>
+
+      <section data-bespoke-state="">
+        <div class="content">
+          <div class="unbrokenline"></div>
+          <h3>Observables</h3>
+          <div class="classy">
+            <div class="byline">can be</div>
+          </div>
+          <h3>merged, concatenated and zipped</h3>
+          <div class="byline">
+            <div class="classy">like any other</div>
+          </div>
+          <h3>collection</h3>
+          <div class="unbrokenline"></div>
+        </div>
+      </section>
+
+      <section>
+        <div class="content">
+          <h3>Observables are a pattern to</h3>
+          <div class="unbrokenline"></div>
+          <div class="fake-list">
+            <h4>- Start a data stream</h4>
+            <h4>- Emit 0 to N messages</h4>
+            <h4>- Teardown the data stream</h4>
+          </div></div>
+      </section>
+
+      <section>
+        <div class="content">
+          <h3>What are "data streams?"</h3>
+          <div class="unbrokenline"></div>
+          <div class="fake-list">
+            <h4>- Arrays of data</h4>
+            <h4>- Mouse/Keyboard Interactions</h4>
+            <h4>- DOM Events</h4>
+            <h4>- Network I/O (e.g. Ajax, WebSockets)</h4>
+            <h4>- Animations</h4>
+            <h4>- Speech Recognition</h4>
+            <h4>- Joystick Input</h4>
+            <h4>- Anything, really</h4>
+          </div>
+        </div>
+      </section>
+
+      <section data-bespoke-state="netflix-hq">
+        <div class="content">
+          <h3>Meanwhile, back at Netflix...</h3>
+          <div class="byline">
+            <div class="classy">RxJS has solved another problem for us</div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="content">
+          <h3>Sockets Die</h3>
+          <div class="unbrokenline"></div>
+          <div class="classy">When our users closed the lid and walked away, or lost network connectivity, the socket would disconnect.</div>
+        </div>
+      </section>
+
+      <section>
+        <div class="content">
+          <h3>multiplexed socket reconnection</h3>
+          <div class="byline">
+            <div class="classy">this gets complicated</div>
+          </div>
+          <div class="fake-list">
+            <h4>- Need to resend real-time data subscription requests</h4>
+            <h4>- That means maintaining state on each recent request</h4>
+            <h4>- Lots of complicated logic in our event handlers</h4>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="content">
+          <h3>Socket Observable</h3>
+          <div class="unbrokenline"></div>
+          <div class="fake-list">
+            <h4>- connect the socket on subscription</h4>
+            <h4>- emit all messages that arrive on the socket</h4>
+            <h4>- error the observable on errors and bad closes</h4>
+            <h4>- diconnect the socket on disposal</h4>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="content">
+          <h3>Multiplexed Data Observable</h3>
+          <div class="unbrokenline"></div>
+          <div class="fake-list">
+            <h4>- sends sub request on subscription</h4>
+            <h4>- mapped from the socket observable</h4>
+            <h4>- filters to only pertinent messages</h4>
+            <h4>- sends an unsub request on disposal</h4>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="content">
+          <h3>Observables can retry!</h3>
+          <pre><code class="language-javascript">// a socket that is singleton
+var socket = Rx.DOM.fromWebSocket('ws://socket-server.com').
+singleInstance();
+
+function getMultiplexData(id) {
+  return Observable.create((observer) => {
+    socket.onNext(JSON.stringify({ id: id, type: 'sub' }));
+
+    var disposable = socket.map(e => JSON.parse(e.data)).
+      filter(d => d.id === id).
+      forEach(observer);
+
+    return function(){
+      socket.onNext(JSON.stringify({ id: id, type: 'unsub' }));
+      disposable.dispose();
+    }
+  }).
+  retry(10);
+}
+          </code></pre>
+        </div>
+      </section>
+
+      <section>
+        <div class="content">
+          <h3>Fair Warning</h3>
+          <div class="byline">
+            <div class="classy">never trust a developer with nothing bad to say</div>
+          </div>
+          <div class="fake-list">
+            <h4>- RxJS has a decent learning curve</h4>
+            <h4>- You need to change how you think about problems</h4>
+            <h4>- There are a lot of operators to learn</h4>
+            <h4>- sometimes sync, sometimes async</h4>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="content">
+          <h4>Reactive Programming</h4>
+          <pre ><code class="language-javascript">var c = a + b;
+
+// Do something with c
+</code></pre></div>
+        </div>
+      </section>
+
+      <section>
+        <div class="content">
+          <h4>Reactive Programming</h4>
+          <pre><code class="language-javascript">var cStream = Observable.combineLatest(aStream, bStream, function(a, b) {
+  return a + b
+});
+
+cStream.forEach(function(c) {
+  // Do something with c
+});
+</code></pre></div>
+        </div>
+      </section>
+
+      <section data-bespoke-state="the-future">
+        <div class="content">
+          <h3>In Angular 2.X, Observables will be first class</h3>
+        </div>
+      </section>
+
+      <section data-bespoke-state="the-present">
+        <div class="content">
+          <h3>But how can we use this today?</h3>
+        </div>
+      </section>
+
+      <!--
+
+      END BEN'S SLIDES
+
+      -->
+
+      <section data-bespoke-state="">
+        <div class="content">
+          <h3>Using RxJS: Reactive Extension for Javascript</h3>
+        </div>
+      </section>
+
+      <section data-bespoke-state="">
+        <div class="content">
+          <h3>In this case, we'll use the Angular Toolkit</h3>
+        </div>
+      </section>
+
+      <section>
+        <div class="content">
+          <h3>Let's start simple :)</h3>
+        </div>
+      </section>
+
+      <section>
+        <div class="content">
+          <h3>Let's imagine a counter app</h3>
+        </div>
+      </section>
+
+    <section data-bespoke-state="livecode">
+      <div class="content" data-angular-app="counter" ng-controller="MainCtrl">
+        <input type="button" value="Click me to increase counter" ng-click="increaseCounter()" />
+        <span>Current counter value {{counter}}</span>
+      </div>
+    </section>
+
+    <section data-bespoke-state="code long">
+        <div class="content nofade">
+          <pre data-line="1-2" ><code class="language-markup">&lt;input type=&quot;button&quot; value=&quot;Click me to increase counter&quot;
+ng-click=&quot;increaseCounter()&quot; /&gt;
+&lt;span&gt;Current counter value {{counter}}&lt;/span&gt;
+</code></pre></div>
+      </section>
+
+      <section data-bespoke-state="code long">
+        <div class="content nofade">
+          <pre data-line="3" ><code class="language-markup">&lt;input type=&quot;button&quot; value=&quot;Click me to increase counter&quot;
+ng-click=&quot;increaseCounter()&quot; /&gt;
+&lt;span&gt;Current counter value {{counter}}&lt;/span&gt;
+</code></pre></div>
+      </section>
+
+      <section data-bespoke-state="code long">
+        <div class="content nofade">
+          <pre data-line="7-17"><code class="language-javascript">angular.module('counter', []);
+
+angular.module('counter').controller('MainCtrl',
+  function(ApiServer, $scope) {
+      $scope.counter = 0;
+
+      $scope.increaseCounter = function() {
+        ApiServer.getCounterAmount(new Date())
+          .then(function(newCount) {
+            return ApiServer.logCounter(newCount).then(function() {
+              return newCount;
+            });
+          })
+          .then(function(newCount) {
+            $scope.counter = $scope.counter + newCount;
+          });
+      }
+});
+</code></pre>
+<p>How we'd regularly do it</p>
+</div>
+      </section>
+
+      <section data-bespoke-state="code long">
+        <div class="content nofade">
+          <pre data-line="1"><code class="language-javascript">angular.module('counter', ['rx']);
+
+angular.module('counter').controller('MainCtrl',
+  function(ApiServer, rx, $scope) {
+      var disposable = $scope.$createObservableFunction('increaseCounter')
+      .flatMap(function() {
+          return rx.Observable.fromPromise(ApiServer.getCounterAmount(new Date()));
+      })
+      .do(ApiServer.logCounter)
+      .scan(function(acc, val) {return acc + val;})
+      .subscribe(function(counter) {
+          $scope.counter = counter;
+          console.log("Total counter is", counter);
+      }, function(error) {
+          console.error("There was an error");
+      });
+
+      $scope.$on('$destroy', function() {
+        disposable.dispose();
+      })
+});
+</code></pre>
+<p>We depend on rx module</p>
+</div>
+      </section>
+
+      <section data-bespoke-state="code long">
+        <div class="content nofade">
+          <pre data-line="5"><code class="language-javascript">angular.module('counter', ['rx']);
+
+angular.module('counter').controller('MainCtrl',
+  function(ApiServer, rx, $scope) {
+      var disposable = $scope.$createObservableFunction('increaseCounter')
+      .flatMap(function() {
+          return rx.Observable.fromPromise(ApiServer.getCounterAmount(new Date()));
+      })
+      .do(ApiServer.logCounter)
+      .scan(function(acc, val) {return acc + val;})
+      .subscribe(function(counter) {
+          $scope.counter = counter;
+          console.log("Total counter is", counter);
+      }, function(error) {
+          console.error("There was an error");
+      });
+
+      $scope.$on('$destroy', function() {
+        disposable.dispose();
+      })
+});
+</code></pre>
+<p>We get the clicks stream</p>
+</div>
+      </section>
+
+      <section data-bespoke-state="code long">
+        <div class="content nofade">
+          <pre data-line="6-8"><code class="language-javascript">angular.module('counter', ['rx']);
+
+angular.module('counter').controller('MainCtrl',
+  function(ApiServer, rx, $scope) {
+      var disposable = $scope.$createObservableFunction('increaseCounter')
+      .flatMap(function() {
+          return rx.Observable.fromPromise(ApiServer.getCounterAmount(new Date()));
+      })
+      .do(ApiServer.logCounter)
+      .scan(function(acc, val) {return acc + val;})
+      .subscribe(function(counter) {
+          $scope.counter = counter;
+          console.log("Total counter is", counter);
+      }, function(error) {
+          console.error("There was an error");
+      });
+
+      $scope.$on('$destroy', function() {
+        disposable.dispose();
+      })
+});
+</code></pre>
+<p>For each new value we get the amount to sum</p>
+</div>
+      </section>
+
+      <section data-bespoke-state="code long">
+        <div class="content nofade">
+          <pre data-line="9"><code class="language-javascript">angular.module('counter', ['rx']);
+
+angular.module('counter').controller('MainCtrl',
+  function(ApiServer, rx, $scope) {
+      var disposable = $scope.$createObservableFunction('increaseCounter')
+      .flatMap(function() {
+          return rx.Observable.fromPromise(ApiServer.getCounterAmount(new Date()));
+      })
+      .do(ApiServer.logCounter)
+      .scan(function(acc, val) {return acc + val;})
+      .subscribe(function(counter) {
+          $scope.counter = counter;
+          console.log("Total counter is", counter);
+      }, function(error) {
+          console.error("There was an error");
+      });
+
+      $scope.$on('$destroy', function() {
+        disposable.dispose();
+      })
+});
+</code></pre>
+<p>As a side effect, we log each of them</p>
+</div>
+      </section>
+
+      <section data-bespoke-state="code long">
+        <div class="content nofade">
+          <pre data-line="10"><code class="language-javascript">angular.module('counter', ['rx']);
+
+angular.module('counter').controller('MainCtrl',
+  function(ApiServer, rx, $scope) {
+      var disposable = $scope.$createObservableFunction('increaseCounter')
+      .flatMap(function() {
+          return rx.Observable.fromPromise(ApiServer.getCounterAmount(new Date()));
+      })
+      .do(ApiServer.logCounter)
+      .scan(function(acc, val) {return acc + val;})
+      .subscribe(function(counter) {
+          $scope.counter = counter;
+          console.log("Total counter is", counter);
+      }, function(error) {
+          console.error("There was an error");
+      });
+
+      $scope.$on('$destroy', function() {
+        disposable.dispose();
+      })
+});
+</code></pre>
+<p>We sum each new value</p>
+</div>
+      </section>
+
+      <section data-bespoke-state="code long">
+        <div class="content nofade">
+          <pre data-line="11-16"><code class="language-javascript">angular.module('counter', ['rx']);
+
+angular.module('counter').controller('MainCtrl',
+  function(ApiServer, rx, $scope) {
+      var disposable = $scope.$createObservableFunction('increaseCounter')
+      .flatMap(function() {
+          return rx.Observable.fromPromise(ApiServer.getCounterAmount(new Date()));
+      })
+      .do(ApiServer.logCounter)
+      .scan(function(acc, val) {return acc + val;})
+      .subscribe(function(counter) {
+          $scope.counter = counter;
+          console.log("Total counter is", counter);
+      }, function(error) {
+          console.error("There was an error");
+      });
+
+      $scope.$on('$destroy', function() {
+        disposable.dispose();
+      })
+});
+</code></pre>
+<p>We subscribe to listen to changes and handle ALL errors</p>
+</div>
+      </section>
+
+      <section data-bespoke-state="code long">
+        <div class="content nofade">
+          <pre data-line="18-20"><code class="language-javascript">angular.module('counter', ['rx']);
+
+angular.module('counter').controller('MainCtrl',
+  function(ApiServer, rx, $scope) {
+      var disposable = $scope.$createObservableFunction('increaseCounter')
+      .flatMap(function() {
+          return rx.Observable.fromPromise(ApiServer.getCounterAmount(new Date()));
+      })
+      .do(ApiServer.logCounter)
+      .scan(function(acc, val) {return acc + val;})
+      .subscribe(function(counter) {
+          $scope.counter = counter;
+          console.log("Total counter is", counter);
+      }, function(error) {
+          console.error("There was an error");
+      });
+
+      $scope.$on('$destroy', function() {
+        disposable.dispose();
+      })
+});
+</code></pre>
+<p>We dispose the observable</p>
+</div>
+      </section>
+
+      <section data-bespoke-state="omg">
+        <div class="content">
+        </div>
+      </section>
+
+      <section class="white only-image">
+        <div class="content nofade">
+          <img class="full-width-img" src="img/stream-diagram-01.jpg">
+        </div>
+      </section>
+
+      <section class="white only-image">
+        <div class="content nofade">
+          <img class="full-width-img" src="img/stream-diagram-02.jpg">
+        </div>
+      </section>
+
+      <section class="white only-image">
+        <div class="content nofade">
+          <img class="full-width-img" src="img/stream-diagram-03.jpg">
+        </div>
+      </section>
+
+      <section class="white only-image">
+        <div class="content nofade">
+          <img class="full-width-img" src="img/stream-diagram-04.jpg">
+        </div>
+      </section>
+
+      <section class="white only-image">
+        <div class="content nofade">
+          <img src="img/observable-diagram.jpg">
+        </div>
+      </section>
+
+      <section data-bespoke-state="happyminion">
+        <div class="content nofade">
+
+        </div>
+      </section>
+
+
+      <section>
+        <div class="content">
+          <h3>Clicking on a counter are very few events</h3>
+        </div>
+      </section>
+
+      <section data-bespoke-state="sadclap">
+        <div class="content nofade">
+
+        </div>
+      </section>
+
+      <section>
+        <div class="content">
+          <h3>Let's actually try with more events!</h3>
+        </div>
+      </section>
+
+      <section data-bespoke-state="livecode" class="mover" data-angular-app="mover" ng-controller="MainCtrl">
+        <div class="content">
+          <moving-text class="moving-text" text="Try Auth0 for free!!!"></moving-text>
+        </div>
+      </section>
+
+      <section data-bespoke-state="code long">
+        <div class="content nofade">
+          <pre><code class="language-markup">&lt;moving-text class=&quot;moving-text&quot; text=&quot;Try Auth0 for free!!!&quot;&gt;&lt;/moving-text&gt;</code></pre>
+        </div>
+      </section>
+
+      <section data-bespoke-state="code long">
+        <div class="content nofade">
+          <pre data-line="1-9"><code class="language-javascript">angular.module('mover').directive('movingText', function() {
+    return {
+        restrict: 'E',
+        replace: 'true',
+        templateUrl: '/js/movingText.html',
+        scope: {
+            text: '@'
+        },
+        controller: MovingController
+    }
+});</code></pre>
+        </div>
+      </section>
+
+      <section data-bespoke-state="code long">
+        <div class="content nofade">
+          <pre data-line="1"><code class="language-markup">&lt;div ng-mousemove=&quot;mouseMoved()&quot;&gt;
+  &lt;div class=&quot;text-container&quot;&gt;
+    &lt;span ng-repeat=&quot;letter in letters&quot; ng-style=&quot;{top: letter.top, left: letter.left}&quot; style=&quot;position: absolute;&quot;&gt;
+      {{letter.text}}
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+
+      <section data-bespoke-state="code long">
+        <div class="content nofade">
+          <pre data-line="2-7"><code class="language-markup">&lt;div ng-mousemove=&quot;mouseMoved()&quot;&gt;
+  &lt;div class=&quot;text-container&quot;&gt;
+    &lt;span ng-repeat=&quot;letter in letters&quot; ng-style=&quot;{top: letter.top, left: letter.left}&quot; style=&quot;position: absolute;&quot;&gt;
+      {{letter.text}}
+    &lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </section>
+
+      <section data-bespoke-state="code long">
+        <div class="content nofade">
+          <pre data-line="4-11"><code class="language-javascript">function directiveController() {
+  $scope.letters = [];
+
+   var mouseMoved = $scope.$createObservableFunction('mouseMoved')
+      .map(function (e) {
+        var offset = getOffset(textContainer);
+        return {
+          offsetX : e.clientX - offset.left,
+          offsetY : e.clientY - offset.top
+        };
+      })
+      .flatMap(function(delta) {
+        return rx.Observable.fromArray(_.map($scope.text, function(letter, index) {
+          return {
+            letter: letter,
+            delta: delta,
+            index: index
+          };
+        }));
+      })
+      // ...
+          </code></pre>
+        </div>
+      </section>
+
+         <section data-bespoke-state="code long">
+        <div class="content nofade">
+          <pre data-line="12-20"><code class="language-javascript">function directiveController() {
+  $scope.letters = [];
+
+   var mouseMoved = $scope.$createObservableFunction('mouseMoved')
+      .map(function (e) {
+        var offset = getOffset(textContainer);
+        return {
+          offsetX : e.clientX - offset.left,
+          offsetY : e.clientY - offset.top
+        };
+      })
+      .flatMap(function(delta) {
+        return rx.Observable.fromArray(_.map($scope.text, function(letter, index) {
+          return {
+            letter: letter,
+            delta: delta,
+            index: index
+          };
+        }));
+      })
+      // ...
+          </code></pre>
+        </div>
+      </section>
+
+      <section data-bespoke-state="code long">
+        <div class="content nofade">
+          <pre data-line="2-12"><code class="language-javascript">// ...
+  .flatMap(function(letterConfig) {
+    return rx.Observable.timer(letterConfig.index * 100)
+        .map(function() {
+          return {
+            text: letterConfig.letter,
+            top: letterConfig.delta.offsetY,
+            left: letterConfig.delta.offsetX + letterConfig.index * 20 + 15,
+            index: letterConfig.index
+          };
+      });
+  })
+  .subscribe(function(letterConfig) {
+    $scope.letters[letterConfig.index] = letterConfig;
+  });
+
+ $scope.$on('$destroy', function(){
+   mouseMoved.dispose();
+ });
+}</code></pre>
+        </div>
+      </section>
+
+      <section data-bespoke-state="code long">
+        <div class="content nofade">
+          <pre data-line="13-15"><code class="language-javascript">// ...
+  .flatMap(function(letterConfig) {
+    return rx.Observable.timer(letterConfig.index * 100)
+        .map(function() {
+          return {
+            text: letterConfig.letter,
+            top: letterConfig.delta.offsetY,
+            left: letterConfig.delta.offsetX + letterConfig.index * 20 + 15,
+            index: letterConfig.index
+          };
+      });
+  })
+  .subscribe(function(letterConfig) {
+    $scope.letters[letterConfig.index] = letterConfig;
+  });
+
+ $scope.$on('$destroy', function(){
+   mouseMoved.dispose();
+ });
+}</code></pre>
+        </div>
+      </section>
+
+      <section data-bespoke-state="code long">
+        <div class="content nofade">
+          <pre data-line="17-19"><code class="language-javascript">// ...
+  .flatMap(function(letterConfig) {
+    return rx.Observable.timer(letterConfig.index * 100)
+        .map(function() {
+          return {
+            text: letterConfig.letter,
+            top: letterConfig.delta.offsetY,
+            left: letterConfig.delta.offsetX + letterConfig.index * 20 + 15,
+            index: letterConfig.index
+          };
+      });
+  })
+  .subscribe(function(letterConfig) {
+    $scope.letters[letterConfig.index] = letterConfig;
+  });
+
+ $scope.$on('$destroy', function(){
+   mouseMoved.dispose();
+ });
+}</code></pre>
+        </div>
+      </section>
+
+      <section data-bespoke-state="happyminion">
+        <div class="content">
+        </div>
+      </section>
+
+       <section>
+        <div class="content">
+          <h2>This is just the beginning</h2>
+        </div>
+      </section>
+
+      <section>
+        <div class="content">
+          <h2>Let's react to everything!</h2>
+        </div>
+      </section>
+
+      <section>
+        <div class="content">
+          <div class="byline">
+            <div class="classy">
+              This is the end of the presentation, so
+            </div>
+          </div>
+          <h3>Thank you for listening</h3>
+          <div class="unbrokenline"></div>
+        </div>
+      </section>
+
+      <section data-bespoke-state="final" class="intro">
+        <div class="content">
+          <div class="byline">
+            <div class="classy">
+              This has been
+            </div>
+          </div>
+          <h1>Reactive All the things</h1>
+          <div class="byline">
+            <div class="classy">
+              by Martin Gontovnikas &amp; Ben Lesh
+            </div>
+          </div>
+          <div class="profile">
+            <div class="rounded-image">
+              <img src="img/gonto.jpg">
+            </div>
+            <h3>@mgonto</h3>
+          </div>
+          <br />
+          <div class="profile">
+            <div class="rounded-image">
+              <img src="img/benlesh.jpeg">
+            </div>
+            <h3>@benlesh</h3>
+          </div>
+        </div>
+      </section>
+
+    </article>
+    <script type="text/javascript">
+      WebFontConfig = {
+        google: { families: [ 'Tauri::latin', 'Alegreya:400italic:latin' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+    </script>
+    <script src="js/bespoke.js"></script>
+    <script src="js/prism.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/deck.js"></script>
+    <script src="js/lodash.js"></script>
+    <script src="js/rx.lite.js"></script>
+    <script src="js/rx.aggregates.js"></script>
+    <script src="js/angular.js"></script>
+    <script src="js/rx.angular.js"></script>
+    <script src="js/app.bootstrap.js"></script>
+    <script src="js/app.basic.js"></script>
+    <script src="js/app.mover.js"></script>
+    </body>
+</html>
