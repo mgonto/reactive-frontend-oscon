@@ -4,7 +4,7 @@ angular.module('mover').directive('movingText', function() {
     return {
         restrict: 'E',
         replace: 'true',
-        templateUrl: '/js/movingText.html',
+        templateUrl: 'js/movingText.html',
         scope: {
             text: '@'
         },
